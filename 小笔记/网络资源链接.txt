@@ -33,7 +33,10 @@ registry=https://registry.npm.taobao.org
 	
 	Swiper.js的使用：https://blog.csdn.net/xuelian3015/article/details/80390596
 	animate.css：https://daneden.github.io/animate.css/
+<<<<<<< HEAD
 ``````````````````````````````````````````````````````````````````````````````````````````````````````````
 弹性盒模型（CSS3 Flexbox可视化指南):https://blog.csdn.net/whqet/article/details/45154977
 博哥面试题：https://github.com/Erioser/GP8-Questions
 蚂蚁金服react组件库:https://ant.design/docs/react/introduce-cn
+=======
+>>>>>>> 4e51780cb311118d403b74177e5bace6eb99cb7a
