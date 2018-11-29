@@ -1,0 +1,4 @@
+初始化：
+nvm create-react-app myapp
+配置代理:
+ 
