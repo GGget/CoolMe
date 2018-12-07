@@ -1,0 +1,42 @@
+1，安装JAVA的jdk，然后配置系统环境变量JAVA_HOME 值为jdk的路径（例C:\Program Files\Java\jdk1.8.0_144）
+2, 安装flutter，将压缩包解压到一个目录，不要放在权限敏感的program file 等目录，找到flutter_console.bat运行，然后配置系统环境变量,在PATH变量的值里面加上bin的完整路径（例C:\Users\acer1\flutter\flutter\bin）
+3，安装SDKtool工具，安装在任意目录下，然后配置系统环境变量ANDROID_HOME 值为这个文件夹的完整路径（例E:\Android\android-sdk）
+4，安装androidstudio，启动，会检测安装安卓SDK，
+5，创建一个workspace文件夹，用户VScode打开，在终端打开，执行flutter doctor,会检测缺失的插件，解决X错误，：
+	//缺少证书:按提示执行，一路Y
+	//缺插件：打开androidstudio,打开setting,plugin,搜索Flutter插件安装，同时会自动安		装Dart插件
+6，创建项目：打开vscode终端，flutter create <APPname>
+7,  MAC:打开模拟器，flutter emulators 检测可用的模拟器，按提示执行命令建立连接模拟器
+     WIN:安卓4.1以手机连上电脑，打开usb调试，执行flutter devices 核实连接是否建立
+8，flutter运行
+	进入应用的根目录（即文件pubspec.yaml所在的目录），运行命令flutter run。
+	    例如：
+$ cd myapp
+$ flutter run
+
+
+	如果你同时连接了多部设备，你需要用设备的deviceID选择一部运行。
+	    例如：
+$ flutter run -d 7B2A282E-24AC-4E9E-BEA1-F5F8F19AFB7C
+	
+
+可以用flutter devices查看已连接的设备（包括模拟器）。
+	
+运行期间，如果修改了代码，可以按键盘的r键进行热更新。(r小更新R大更新)
+	
+按control+c结束运行
+
+
+
+问题：
+1:run 进行到第二步的时候卡在Resolve dependencies’:app:_debugCompile’ 
+   原因是网的问题Google被墙了，多运行几次就好了，或者将android/build.gradle文件内修改
+	repositories {
+		maven { url 'https://maven.aliyun.com/repository/google' }
+		maven { url 'https://maven.aliyun.com/repository/jcenter' }
+		maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+	}
+2：Waiting for another flutter command to release the startup lock
+	打开flutter的安装目录/bin/cache
+	删除lockfile文件 
+	重启VScode

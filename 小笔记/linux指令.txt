@@ -1,0 +1,21 @@
+Linux CentOS 安装图形界面
+
+1、首先安装X(X Window System),命令为
+yum groupinstall "X Window System" 回车（注意有引号）
+
+2、由于这个软件组比较大，安装过程会比较慢，安装完成会出现complete！
+
+3、检查一下我们已经安装的软件以及可以安装的软件，用命令
+yum grouplist 回车
+
+4、然后安装我们需要的图形界面软件，MATE(MATE Desktop)
+这里需要特别注意！！！！
+一定要注意 名称必须对应 不同版本的centOS的软件名可能不同 其他Linux系统类似
+否则会出现No packages in any requested group available to install or update 的错误。
+
+5、同样的。
+
+由于这个软件组比第一个要大很多（包含700个左右的软件），安装过程会很慢，请耐心等待。安装完成会出现complete
+
+6、安装完成后我们可以通过命令 startx 进入图形界面，第一次进入会比较慢，请耐心等待。（可能需要重启，命令为reboot）
+
